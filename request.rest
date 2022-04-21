@@ -1,0 +1,57 @@
+GET http://localhost:5000/products
+
+###
+GET http://localhost:5000/products/2
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "title":"masako",
+    "price":1000
+}
+
+###
+PATCH http://localhost:5000/products/1
+Content-Type: application/json
+
+{
+    "title":"masako",
+    "price":1500
+}
+
+###
+DELETE http://localhost:5000/products/3,5,6
+
+###
+GET http://localhost:5000/getUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJBZG1pbiIsImVtYWlsIjoiQWRtaW5AZ21haWwuY29tIiwiaWF0IjoxNjUwMTE1OTU2LCJleHAiOjE2NTAxMTU5NzZ9.nLPYfTPy5xdB-VptiDkHAmeNTHN1t5Jt8KE3Khr4KsE
+
+
+
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name":"Admin",
+    "email":"Admin1@gmail.com",
+    "password":"123455",
+    "confirmPassword":"123455"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"Admin@gmail.com",
+    "password":"12345"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
